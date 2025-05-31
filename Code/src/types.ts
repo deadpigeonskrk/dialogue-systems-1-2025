@@ -4,7 +4,8 @@ import { AnyActorRef } from "xstate";
 export interface DMContext {
   spstRef: AnyActorRef;
   lastResult: Hypothesis[] | null;
-  data_dict : {[key:string] : {utterance :string };
+  lastResultNLU: any;
+  data_dict : {[key:string] : string };
 }
 
 export type DMEvents = SpeechStateExternalEvent | { type: "CLICK" };
